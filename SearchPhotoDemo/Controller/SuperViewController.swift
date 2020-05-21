@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwifterSwift
 
 class SuperViewController: UIViewController {
 
@@ -16,6 +17,9 @@ class SuperViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActivityView()
+        
+        // KeyBoard dismiss
+        hiddenKeyBoardWhenTapView()
     }
     
     /// setup activity view (load view)

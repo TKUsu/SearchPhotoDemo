@@ -6,5 +6,5 @@ target 'SearchPhotoDemo' do
   use_frameworks!
 
   # Pods for SearchPhotoDemo
-
+  pod 'SwifterSwift/UIKit'
 end

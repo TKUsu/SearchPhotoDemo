@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="SearchPhotoDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="Btn_action" destination="yMR-Qi-unQ" id="WBr-Aa-ddS"/>
+                <outlet property="Btn_action2" destination="Qdc-Nt-sXV" id="dzo-uF-H9v"/>
+                <outlet property="LBl_title" destination="Yue-q6-oEf" id="y5M-Zf-UhZ"/>
+                <outlet property="Lbl_message" destination="1n8-sE-OuB" id="xRD-Zh-7N9"/>
+                <outlet property="Lbl_subTitle" destination="VmI-45-yUw" id="8B9-J5-Uhc"/>
+                <outlet property="alertView" destination="UDy-nm-ciz" id="nPJ-96-TaZ"/>
+                <outlet property="bgView" destination="ohg-ty-get" id="uML-oc-j3o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohg-ty-get">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-nm-ciz">
+                    <rect key="frame" x="58.5" y="299.5" width="297" height="297"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-q6-oEf">
+                            <rect key="frame" x="4" y="48" width="289" height="39.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32.799999237060547"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eNy-RG-khd">
+                            <rect key="frame" x="4" y="103" width="289" height="59.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmI-45-yUw">
+                                    <rect key="frame" x="0.0" y="0.0" width="289" height="29"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24.799999237060547"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1n8-sE-OuB">
+                                    <rect key="frame" x="0.0" y="39" width="289" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6WH-P5-QRG">
+                            <rect key="frame" x="4" y="187.5" width="289" height="103"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMR-Qi-unQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="289" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48.899999999999999" id="SeQ-7m-hDy"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23.100000381469727"/>
+                                    <state key="normal" title="確認"/>
+                                    <connections>
+                                        <action selector="action1:" destination="-1" eventType="touchUpInside" id="N1C-Gz-BRe"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdc-Nt-sXV">
+                                    <rect key="frame" x="0.0" y="54" width="289" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48.899999999999999" id="sGS-w3-mlG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23.100000381469727"/>
+                                    <state key="normal" title="取消"/>
+                                    <connections>
+                                        <action selector="action2:" destination="-1" eventType="touchUpInside" id="hqO-U0-nlX"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6WH-P5-QRG" secondAttribute="bottom" constant="6.7999999999999998" id="4hu-wZ-7eC"/>
+                        <constraint firstAttribute="trailing" secondItem="eNy-RG-khd" secondAttribute="trailing" constant="4" id="9cA-bx-WpR"/>
+                        <constraint firstItem="eNy-RG-khd" firstAttribute="top" secondItem="Yue-q6-oEf" secondAttribute="bottom" constant="15.5" id="AiR-LW-SjK"/>
+                        <constraint firstAttribute="width" constant="297.30000000000001" id="FFS-0t-d3E"/>
+                        <constraint firstItem="6WH-P5-QRG" firstAttribute="leading" secondItem="UDy-nm-ciz" secondAttribute="leading" constant="4" id="IPZ-gO-CGS"/>
+                        <constraint firstItem="Yue-q6-oEf" firstAttribute="centerX" secondItem="UDy-nm-ciz" secondAttribute="centerX" id="LXV-Sk-co3"/>
+                        <constraint firstItem="6WH-P5-QRG" firstAttribute="top" secondItem="eNy-RG-khd" secondAttribute="bottom" constant="25" id="Xfr-dk-czp"/>
+                        <constraint firstItem="Yue-q6-oEf" firstAttribute="trailing" secondItem="eNy-RG-khd" secondAttribute="trailing" id="eco-ES-nyo"/>
+                        <constraint firstItem="Yue-q6-oEf" firstAttribute="top" secondItem="UDy-nm-ciz" secondAttribute="top" constant="48" id="rgg-sL-rL7"/>
+                        <constraint firstItem="Yue-q6-oEf" firstAttribute="leading" secondItem="eNy-RG-khd" secondAttribute="leading" id="uj8-jc-VBY"/>
+                        <constraint firstItem="eNy-RG-khd" firstAttribute="leading" secondItem="UDy-nm-ciz" secondAttribute="leading" constant="4" id="wES-32-aV4"/>
+                        <constraint firstAttribute="trailing" secondItem="6WH-P5-QRG" secondAttribute="trailing" constant="4" id="xOJ-9u-Ozi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ohg-ty-get" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Kz-se-i5X"/>
+                <constraint firstItem="ohg-ty-get" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4v8-ex-f4H"/>
+                <constraint firstItem="UDy-nm-ciz" firstAttribute="height" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Gtp-Uq-KLQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ohg-ty-get" secondAttribute="trailing" id="IAv-2I-QS8"/>
+                <constraint firstItem="UDy-nm-ciz" firstAttribute="width" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="width" id="N15-1j-xLa"/>
+                <constraint firstItem="UDy-nm-ciz" firstAttribute="centerY" secondItem="ohg-ty-get" secondAttribute="centerY" id="U75-yi-E4f"/>
+                <constraint firstAttribute="bottom" secondItem="ohg-ty-get" secondAttribute="bottom" id="mE1-fR-f0M"/>
+                <constraint firstItem="UDy-nm-ciz" firstAttribute="centerX" secondItem="ohg-ty-get" secondAttribute="centerX" id="sZw-B4-BNr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </view>
+    </objects>
+</document>

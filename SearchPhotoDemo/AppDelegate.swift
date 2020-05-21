@@ -7,21 +7,29 @@
 //
 
 import UIKit
+import SwifterSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigationController: UINavigationController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SearchViewController.storyBoardID) as? SearchViewController else {
+        guard let vc = UIStoryboard.main?.instantiateViewController(withClass: SearchViewController.self) else {
             fatalError("[Error] Could not found SearchViewController.")
         }
-        let nv = UINavigationController(rootViewController: vc)
-        window?.rootViewController = nv
-        window?.becomeKey()
+        navigationController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+//        if let url = launchOptions?[.url] as? URL {
+//            if url.host == "oauth-callback" {
+//              OAuthSwift.handle(url: url)
+//            }
+//        }
+        
         return true
     }
 }
@@ -29,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 @available(iOS 13.0, *)
 extension AppDelegate{
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.

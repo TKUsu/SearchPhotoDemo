@@ -1,0 +1,16 @@
+PODS:
+  - SwifterSwift/UIKit (5.1.0)
+
+DEPENDENCIES:
+  - SwifterSwift/UIKit
+
+SPEC REPOS:
+  trunk:
+    - SwifterSwift
+
+SPEC CHECKSUMS:
+  SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+
+PODFILE CHECKSUM: 62665ba038abaf14438114723b09a5e3226294d5
+
+COCOAPODS: 1.9.1
