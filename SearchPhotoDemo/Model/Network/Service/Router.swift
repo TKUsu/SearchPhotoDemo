@@ -48,6 +48,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
             let session = self.setupSSL(enable: false)
             do {
                 let request = try self.buildRequest(from: route)
+                print("[Note]Request URL: \(request.url)")
                 self.task = session.dataTask(with: request, completionHandler: { (data, response, error) in
                     completion(data, response, error)
                 })

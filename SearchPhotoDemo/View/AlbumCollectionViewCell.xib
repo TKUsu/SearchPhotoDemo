@@ -24,21 +24,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BO9-KJ-jXJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF0-lw-9QD">
-                                        <rect key="frame" x="39" y="89.5" width="42" height="30.5"/>
+                                        <rect key="frame" x="39" y="50" width="42" height="70"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="hF0-lw-9QD" firstAttribute="height" relation="lessThanOrEqual" secondItem="CEd-Ia-Q8I" secondAttribute="height" multiplier="0.7" id="eB8-0L-MgL"/>
                                     <constraint firstItem="hF0-lw-9QD" firstAttribute="width" relation="lessThanOrEqual" secondItem="CEd-Ia-Q8I" secondAttribute="width" id="lZH-nU-Mtg"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPU-pB-6NU">
-                                <rect key="frame" x="80" y="69.5" width="40" height="40"/>
+                                <rect key="frame" x="80" y="30" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EPU-pB-6NU" secondAttribute="height" id="MJt-ow-eAv"/>
                                 </constraints>

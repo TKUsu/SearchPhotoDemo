@@ -75,7 +75,6 @@
 		8B599E7B247790C90071C702 /* FavoriteCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewController.xib; sourceTree = "<group>"; };
 		8B599E7E24779A340071C702 /* FavoriteCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewModel.swift; sourceTree = "<group>"; };
 		8B599E8024779B460071C702 /* FavoriteAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAlbum.swift; sourceTree = "<group>"; };
-		8B5BA7A12477C2C4009CC281 /* CoreDataFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDataFramework.framework; path = SearchPhotoDemo/Frameworks/CoreDataFramework.framework; sourceTree = "<group>"; };
 		8B61DD6A24767B4500DAB86C /* Ext+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+Codable.swift"; sourceTree = "<group>"; };
 		8B61DD8024767BAC00DAB86C /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		8B61DD8124767BAC00DAB86C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -295,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				8B6722EB2477CFE4000185B4 /* CoreData.framework */,
-				8B5BA7A12477C2C4009CC281 /* CoreDataFramework.framework */,
 				B0A97CA643536A9AB4FF4826 /* Pods_SearchPhotoDemo.framework */,
 			);
 			name = Frameworks;
