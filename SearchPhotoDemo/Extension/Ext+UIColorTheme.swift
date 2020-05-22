@@ -12,9 +12,9 @@ import UIKit
 extension UIColor{
     static var floatBG: UIColor{
         if #available(iOS 13.0, *) {
-            return UIColor.label.withAlphaComponent(0.6)
+            return UIColor.label.withAlphaComponent(0.3)
         } else {
-            return UIColor.black.withAlphaComponent(0.6)
+            return UIColor.black.withAlphaComponent(0.3)
         }
     }
 }

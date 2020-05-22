@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        guard let vc = UIStoryboard.main?.instantiateViewController(withClass: SearchViewController.self) else {
+        guard let vc = UIStoryboard.main?.instantiateViewController(withClass: TabBarViewController.self) else {
             fatalError("[Error] Could not found SearchViewController.")
         }
-        navigationController = UINavigationController(rootViewController: vc)
-        window?.rootViewController = navigationController
+//        navigationController = UINavigationController(rootViewController: vc)
+//        window?.rootViewController = navigationController
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
 //        if let url = launchOptions?[.url] as? URL {

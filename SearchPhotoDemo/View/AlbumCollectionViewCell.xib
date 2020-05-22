@@ -20,27 +20,45 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqS-q1-ng4">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CEd-Ia-Q8I">
-                                <rect key="frame" x="5" y="5" width="110" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CEd-Ia-Q8I">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BO9-KJ-jXJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="89.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="89.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF0-lw-9QD">
-                                        <rect key="frame" x="0.0" y="89.5" width="110" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF0-lw-9QD">
+                                        <rect key="frame" x="39" y="89.5" width="42" height="30.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="hF0-lw-9QD" firstAttribute="width" relation="lessThanOrEqual" secondItem="CEd-Ia-Q8I" secondAttribute="width" id="lZH-nU-Mtg"/>
+                                </constraints>
                             </stackView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPU-pB-6NU">
+                                <rect key="frame" x="80" y="69.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EPU-pB-6NU" secondAttribute="height" id="MJt-ow-eAv"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="unfavorite"/>
+                                <connections>
+                                    <action selector="favoriteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Itp-47-M7Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CEd-Ia-Q8I" firstAttribute="leading" secondItem="HqS-q1-ng4" secondAttribute="leading" constant="5" id="4ej-yt-Q3s"/>
-                            <constraint firstAttribute="trailing" secondItem="CEd-Ia-Q8I" secondAttribute="trailing" constant="5" id="7Iv-Eb-NGB"/>
-                            <constraint firstItem="CEd-Ia-Q8I" firstAttribute="top" secondItem="HqS-q1-ng4" secondAttribute="top" constant="5" id="aQA-XV-wA5"/>
-                            <constraint firstAttribute="bottom" secondItem="CEd-Ia-Q8I" secondAttribute="bottom" constant="5" id="ic1-T9-DcF"/>
+                            <constraint firstItem="EPU-pB-6NU" firstAttribute="centerY" secondItem="BO9-KJ-jXJ" secondAttribute="centerY" multiplier="2" priority="750" id="16n-5J-BuU"/>
+                            <constraint firstItem="CEd-Ia-Q8I" firstAttribute="leading" secondItem="HqS-q1-ng4" secondAttribute="leading" id="4ej-yt-Q3s"/>
+                            <constraint firstAttribute="trailing" secondItem="CEd-Ia-Q8I" secondAttribute="trailing" id="7Iv-Eb-NGB"/>
+                            <constraint firstItem="CEd-Ia-Q8I" firstAttribute="top" secondItem="HqS-q1-ng4" secondAttribute="top" id="aQA-XV-wA5"/>
+                            <constraint firstAttribute="bottom" secondItem="CEd-Ia-Q8I" secondAttribute="bottom" id="ic1-T9-DcF"/>
+                            <constraint firstItem="EPU-pB-6NU" firstAttribute="trailing" secondItem="CEd-Ia-Q8I" secondAttribute="trailing" id="jch-Tw-fmr"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EPU-pB-6NU" secondAttribute="bottom" id="vMi-Q7-4w1"/>
+                            <constraint firstItem="EPU-pB-6NU" firstAttribute="width" secondItem="HqS-q1-ng4" secondAttribute="width" multiplier="1/3" id="x4A-9d-qpf"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -54,10 +72,14 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="120" height="120"/>
             <connections>
+                <outlet property="Btn_favorite" destination="EPU-pB-6NU" id="ifA-BO-VOD"/>
                 <outlet property="Lbl_title" destination="hF0-lw-9QD" id="w1g-me-oYE"/>
                 <outlet property="imgV" destination="BO9-KJ-jXJ" id="6TV-Qa-4OR"/>
             </connections>
-            <point key="canvasLocation" x="188.40579710144928" y="165.40178571428569"/>
+            <point key="canvasLocation" x="188.40579710144928" y="164.73214285714286"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="unfavorite" width="128" height="128"/>
+    </resources>
 </document>

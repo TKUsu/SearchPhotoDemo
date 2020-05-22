@@ -14,7 +14,13 @@
 		8B1882C8247629CF0024ADA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1882C4247629CE0024ADA4 /* Main.storyboard */; };
 		8B1882C9247629CF0024ADA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1882C6247629CF0024ADA4 /* LaunchScreen.storyboard */; };
 		8B599E6C2476EC550071C702 /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E6B2476EC550071C702 /* PhotoCellViewModel.swift */; };
-		8B61DD6924766AD600DAB86C /* AlbumCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DD6824766AD600DAB86C /* AlbumCollectionViewLayout.swift */; };
+		8B599E6F247782A60071C702 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E6E247782A60071C702 /* TabBarViewController.swift */; };
+		8B599E73247788A50071C702 /* Ext+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E72247788A50071C702 /* Ext+UIImage.swift */; };
+		8B599E7524778EEC0071C702 /* Ext+NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E7424778EEC0071C702 /* Ext+NotificationName.swift */; };
+		8B599E7C247790C90071C702 /* FavoriteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E7A247790C90071C702 /* FavoriteCollectionViewController.swift */; };
+		8B599E7D247790C90071C702 /* FavoriteCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B599E7B247790C90071C702 /* FavoriteCollectionViewController.xib */; };
+		8B599E7F24779A350071C702 /* FavoriteCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E7E24779A340071C702 /* FavoriteCollectionViewModel.swift */; };
+		8B599E8124779B460071C702 /* FavoriteAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E8024779B460071C702 /* FavoriteAlbum.swift */; };
 		8B61DD7524767B4600DAB86C /* Ext+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DD6A24767B4500DAB86C /* Ext+Codable.swift */; };
 		8B61DD8224767BAD00DAB86C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DD8124767BAC00DAB86C /* ParameterEncoder.swift */; };
 		8B61DD8324767BAD00DAB86C /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DD8024767BAC00DAB86C /* Parameters.swift */; };
@@ -56,7 +62,14 @@
 		8B1882C5247629CE0024ADA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B1882C7247629CF0024ADA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B599E6B2476EC550071C702 /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
-		8B61DD6824766AD600DAB86C /* AlbumCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewLayout.swift; sourceTree = "<group>"; };
+		8B599E6D247781390071C702 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B599E6E247782A60071C702 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8B599E72247788A50071C702 /* Ext+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIImage.swift"; sourceTree = "<group>"; };
+		8B599E7424778EEC0071C702 /* Ext+NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+NotificationName.swift"; sourceTree = "<group>"; };
+		8B599E7A247790C90071C702 /* FavoriteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewController.swift; sourceTree = "<group>"; };
+		8B599E7B247790C90071C702 /* FavoriteCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewController.xib; sourceTree = "<group>"; };
+		8B599E7E24779A340071C702 /* FavoriteCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewModel.swift; sourceTree = "<group>"; };
+		8B599E8024779B460071C702 /* FavoriteAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAlbum.swift; sourceTree = "<group>"; };
 		8B61DD6A24767B4500DAB86C /* Ext+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+Codable.swift"; sourceTree = "<group>"; };
 		8B61DD8024767BAC00DAB86C /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		8B61DD8124767BAC00DAB86C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -128,6 +141,7 @@
 		8B1882AE247621410024ADA4 /* SearchPhotoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8B599E6D247781390071C702 /* README.md */,
 				8B61DDA72476D74200DAB86C /* AppInfo.swift */,
 				8B1882AF247621410024ADA4 /* AppDelegate.swift */,
 				8B1882B1247621410024ADA4 /* SceneDelegate.swift */,
@@ -147,10 +161,9 @@
 			children = (
 				8B1882C6247629CF0024ADA4 /* LaunchScreen.storyboard */,
 				8B1882C4247629CE0024ADA4 /* Main.storyboard */,
-				8B61DD6824766AD600DAB86C /* AlbumCollectionViewLayout.swift */,
 				8B8639FC2476384C008D9C9C /* AlbumCollectionViewCell.swift */,
 				8B8639FD2476384C008D9C9C /* AlbumCollectionViewCell.xib */,
-				8BBBAF6424765A7A00980830 /* AlertViewController.swift */,
+				8B599E7B247790C90071C702 /* FavoriteCollectionViewController.xib */,
 				8BBBAF6224765A7900980830 /* AlertViewController.xib */,
 			);
 			path = View;
@@ -223,6 +236,8 @@
 				8B8639F92476360C008D9C9C /* Ext+UIViewController.swift */,
 				8BBBAF6824765AFD00980830 /* Ext+UIColorTheme.swift */,
 				8B61DD6A24767B4500DAB86C /* Ext+Codable.swift */,
+				8B599E72247788A50071C702 /* Ext+UIImage.swift */,
+				8B599E7424778EEC0071C702 /* Ext+NotificationName.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -232,6 +247,7 @@
 			children = (
 				8B863A072476502E008D9C9C /* AlbumViewModel.swift */,
 				8B599E6B2476EC550071C702 /* PhotoCellViewModel.swift */,
+				8B599E7E24779A340071C702 /* FavoriteCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,8 +256,11 @@
 			isa = PBXGroup;
 			children = (
 				8B8639F724762CDE008D9C9C /* SuperViewController.swift */,
+				8B599E6E247782A60071C702 /* TabBarViewController.swift */,
 				8B1882B3247621410024ADA4 /* SearchViewController.swift */,
 				8B8639F524762AA1008D9C9C /* AlbumViewController.swift */,
+				8B599E7A247790C90071C702 /* FavoriteCollectionViewController.swift */,
+				8BBBAF6424765A7A00980830 /* AlertViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				8B61DDA524768D5500DAB86C /* APIStruct.swift */,
+				8B599E8024779B460071C702 /* FavoriteAlbum.swift */,
 				8B61DD7F24767B4A00DAB86C /* Network */,
 			);
 			path = Model;
@@ -323,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B599E7D247790C90071C702 /* FavoriteCollectionViewController.xib in Resources */,
 				8B8639FF2476384C008D9C9C /* AlbumCollectionViewCell.xib in Resources */,
 				8B1882C9247629CF0024ADA4 /* LaunchScreen.storyboard in Resources */,
 				8B1882B9247621430024ADA4 /* Assets.xcassets in Resources */,
@@ -387,10 +408,13 @@
 				8B61DD8224767BAD00DAB86C /* ParameterEncoder.swift in Sources */,
 				8B8639F624762AA1008D9C9C /* AlbumViewController.swift in Sources */,
 				8B1882B4247621410024ADA4 /* SearchViewController.swift in Sources */,
+				8B599E8124779B460071C702 /* FavoriteAlbum.swift in Sources */,
 				8B61DD8A24767BD400DAB86C /* Manager.swift in Sources */,
-				8B61DD6924766AD600DAB86C /* AlbumCollectionViewLayout.swift in Sources */,
+				8B599E7524778EEC0071C702 /* Ext+NotificationName.swift in Sources */,
+				8B599E73247788A50071C702 /* Ext+UIImage.swift in Sources */,
 				8B61DD9C24767C4500DAB86C /* FlickrEndPoint.swift in Sources */,
 				8B8639F824762CDE008D9C9C /* SuperViewController.swift in Sources */,
+				8B599E7C247790C90071C702 /* FavoriteCollectionViewController.swift in Sources */,
 				8B61DD8324767BAD00DAB86C /* Parameters.swift in Sources */,
 				8B61DD9724767BE500DAB86C /* EndPoint.swift in Sources */,
 				8B61DDA82476D74200DAB86C /* AppInfo.swift in Sources */,
@@ -408,6 +432,8 @@
 				8BBBAF6624765A7A00980830 /* Ext+UIVC_AlertViewController.swift in Sources */,
 				8B599E6C2476EC550071C702 /* PhotoCellViewModel.swift in Sources */,
 				8B61DDA624768D5500DAB86C /* APIStruct.swift in Sources */,
+				8B599E7F24779A350071C702 /* FavoriteCollectionViewModel.swift in Sources */,
+				8B599E6F247782A60071C702 /* TabBarViewController.swift in Sources */,
 				8B8639FE2476384C008D9C9C /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

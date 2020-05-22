@@ -51,7 +51,7 @@ class SearchViewController: SuperViewController {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         DispatchQueue.main.async {
-            self.enableSearch = (self.Fid_search.text != "") && (self.Fid_prePage.text != "")
+            self.judgeSearchButtonEnable()
         }
     }
     
@@ -61,10 +61,15 @@ class SearchViewController: SuperViewController {
         Fid_search.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         Fid_prePage.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
+    
     private func setupStyle(){
         title = "Search"
         Fid_prePage.keyboardType = .numberPad
         Btn_search.layer.masksToBounds = true
         Btn_search.layer.cornerRadius = Btn_search.frame.height / 2
+        judgeSearchButtonEnable()
+    }
+    fileprivate func judgeSearchButtonEnable() {
+        self.enableSearch = (self.Fid_search.text != "") && (self.Fid_prePage.text != "")
     }
 }

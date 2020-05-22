@@ -18,9 +18,9 @@ struct Photos: Codable {
     let pages: Int
     let perpage: Int
     let total: String
-    let photo: [Photo]
+    let photo: [SearchPhoto]
 }
-struct Photo: Codable {
+struct SearchPhoto: Codable {
     let id: String
     let owner: String
     let secret: String

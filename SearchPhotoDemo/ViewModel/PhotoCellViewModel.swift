@@ -9,10 +9,13 @@
 import UIKit
 
 struct PhotoCellViewModel {
+    let id: String
     let title: String
     let imageURL: String
+    var isfavorite: Bool = false
     
-    init(title: String, imageURL: String) {
+    init(id: String, title: String, imageURL: String) {
+        self.id = id
         self.title = title
         self.imageURL = imageURL
     }

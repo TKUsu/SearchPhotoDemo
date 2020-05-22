@@ -15,6 +15,7 @@ class AlbumViewController: SuperViewController {
     var perPage: String!
     
     var colV: UICollectionView!
+    var refreshCtl: UIRefreshControl!
     
     fileprivate var viewModel: AlbumViewModel!
     
@@ -22,14 +23,16 @@ class AlbumViewController: SuperViewController {
         super.viewDidLoad()
         setup()
         setupView()
+        
+        loadData()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    // MARK: - Private
+    @objc fileprivate func loadData() {
         activityView.startAnimating()
         viewModel.requestAlbum(search: searchText, perPage: perPage)
     }
     
-    // MARK: - Private
     private func setup(){
         viewModel = AlbumViewModel()
         viewModel.delegate = self
@@ -38,6 +41,12 @@ class AlbumViewController: SuperViewController {
         colV = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         colV.delegate = self
         colV.dataSource = self
+        
+        refreshCtl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: colV.bounds.width, height: 100))
+        refreshCtl.tintColor = .lightGray
+        refreshCtl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        colV.addSubview(refreshCtl)
+        colV.alwaysBounceVertical = true
     }
     private func setupView(){
         // view and constraint
@@ -65,6 +74,7 @@ extension AlbumViewController: AlbumViewModelDelegate{
         DispatchQueue.main.async {[weak self] in
             self?.colV.reloadData()
             self?.activityView.stopAnimating()
+            self?.refreshCtl.endRefreshing()
         }
     }
 }
@@ -72,7 +82,8 @@ extension AlbumViewController: AlbumViewModelDelegate{
 // MARK: - CollectionView delegate and dataSource
 extension AlbumViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.bounds.width / 2, height: view.bounds.width / 2)
+        let width = view.bounds.width / 2 - 10
+        return CGSize(width: width, height: width)
     }
 }
 extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -84,7 +95,11 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withClass: AlbumCollectionViewCell.self, for: indexPath)
         
         cell.setup(with: viewModel.album[indexPath.row])
+        cell.onFavorite = onfavorite(_:)
         
         return cell
+    }
+    fileprivate func onfavorite(_ photo: PhotoCellViewModel){
+        viewModel.updatefavorite(photo: photo)
     }
 }

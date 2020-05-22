@@ -19,10 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        guard let vc = UIStoryboard.main?.instantiateViewController(withClass: SearchViewController.self) else{
+        guard let vc = UIStoryboard.main?.instantiateViewController(withClass: TabBarViewController.self) else{
             fatalError("[Error] Could not found SearchViewController.")
         }
-        window?.rootViewController = UINavigationController(rootViewController: vc)
+//        window?.rootViewController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
     

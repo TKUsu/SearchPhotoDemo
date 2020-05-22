@@ -8,15 +8,15 @@
 
 import Foundation
 
+typealias AlBum = [PhotoCellViewModel]
 protocol AlbumViewModelDelegate: NSObject {
     func didRequestAlbum()
     func didRequestError(code: String?, log: String?)
 }
-
 class AlbumViewModel {
     weak var delegate: AlbumViewModelDelegate?
     
-    var album: [PhotoCellViewModel] = []
+    var album: AlBum = []
     
     fileprivate var manager = NetworkManager()
     
@@ -35,8 +35,16 @@ class AlbumViewModel {
                 return
             }
             self.album = res.photos.photo.map({ (photo) -> PhotoCellViewModel in
-                return PhotoCellViewModel(title: photo.title, imageURL: photo.imageURL)
+                return PhotoCellViewModel(id: photo.id, title: photo.title, imageURL: photo.imageURL)
             })
+            // TODO: load DB to sync data
             self.delegate?.didRequestAlbum()
-        }    }
+        }
+    }
+    
+    func updatefavorite(photo: PhotoCellViewModel) {
+        favoriteAlbum.update(photo: photo)
+        NotificationCenter.default.post(name: .updatefavorite, object: nil)
+        // TODO: Save
+    }
 }
