@@ -37,6 +37,11 @@
 		8B61DD9E24767C8A00DAB86C /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DD9D24767C8A00DAB86C /* APIMethod.swift */; };
 		8B61DDA624768D5500DAB86C /* APIStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DDA524768D5500DAB86C /* APIStruct.swift */; };
 		8B61DDA82476D74200DAB86C /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61DDA72476D74200DAB86C /* AppInfo.swift */; };
+		8B6722E62477CE32000185B4 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6722E42477CE31000185B4 /* Photo+CoreDataProperties.swift */; };
+		8B6722E82477CE32000185B4 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6722E32477CE31000185B4 /* Photo+CoreDataClass.swift */; };
+		8B6722EA2477CF33000185B4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6722E92477CF32000185B4 /* CoreDataManager.swift */; };
+		8B6722EC2477CFE4000185B4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6722EB2477CFE4000185B4 /* CoreData.framework */; };
+		8B6722ED2477D117000185B4 /* CoreDataModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 8B6722E12477CE31000185B4 /* CoreDataModel.xcdatamodeld */; };
 		8B8639F624762AA1008D9C9C /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8639F524762AA1008D9C9C /* AlbumViewController.swift */; };
 		8B8639F824762CDE008D9C9C /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8639F724762CDE008D9C9C /* SuperViewController.swift */; };
 		8B8639FA2476360C008D9C9C /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8639F92476360C008D9C9C /* Ext+UIViewController.swift */; };
@@ -70,6 +75,7 @@
 		8B599E7B247790C90071C702 /* FavoriteCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewController.xib; sourceTree = "<group>"; };
 		8B599E7E24779A340071C702 /* FavoriteCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewModel.swift; sourceTree = "<group>"; };
 		8B599E8024779B460071C702 /* FavoriteAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAlbum.swift; sourceTree = "<group>"; };
+		8B5BA7A12477C2C4009CC281 /* CoreDataFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDataFramework.framework; path = SearchPhotoDemo/Frameworks/CoreDataFramework.framework; sourceTree = "<group>"; };
 		8B61DD6A24767B4500DAB86C /* Ext+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+Codable.swift"; sourceTree = "<group>"; };
 		8B61DD8024767BAC00DAB86C /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		8B61DD8124767BAC00DAB86C /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
@@ -86,6 +92,11 @@
 		8B61DD9D24767C8A00DAB86C /* APIMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
 		8B61DDA524768D5500DAB86C /* APIStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStruct.swift; sourceTree = "<group>"; };
 		8B61DDA72476D74200DAB86C /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		8B6722E22477CE31000185B4 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		8B6722E32477CE31000185B4 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B6722E42477CE31000185B4 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B6722E92477CF32000185B4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8B6722EB2477CFE4000185B4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8B8639F524762AA1008D9C9C /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		8B8639F724762CDE008D9C9C /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
 		8B8639F92476360C008D9C9C /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
@@ -105,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC92122B41CAE9FE5C4D196 /* Pods_SearchPhotoDemo.framework in Frameworks */,
+				8B6722EC2477CFE4000185B4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +283,10 @@
 				8B61DDA524768D5500DAB86C /* APIStruct.swift */,
 				8B599E8024779B460071C702 /* FavoriteAlbum.swift */,
 				8B61DD7F24767B4A00DAB86C /* Network */,
+				8B6722E92477CF32000185B4 /* CoreDataManager.swift */,
+				8B6722E12477CE31000185B4 /* CoreDataModel.xcdatamodeld */,
+				8B6722E32477CE31000185B4 /* Photo+CoreDataClass.swift */,
+				8B6722E42477CE31000185B4 /* Photo+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +294,8 @@
 		B9F7B6B23997B3950ADA36BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B6722EB2477CFE4000185B4 /* CoreData.framework */,
+				8B5BA7A12477C2C4009CC281 /* CoreDataFramework.framework */,
 				B0A97CA643536A9AB4FF4826 /* Pods_SearchPhotoDemo.framework */,
 			);
 			name = Frameworks;
@@ -349,6 +367,7 @@
 				8B1882B9247621430024ADA4 /* Assets.xcassets in Resources */,
 				8B1882C8247629CF0024ADA4 /* Main.storyboard in Resources */,
 				8BBBAF6524765A7A00980830 /* AlertViewController.xib in Resources */,
+				8B6722ED2477D117000185B4 /* CoreDataModel.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,9 +445,12 @@
 				8B61DD9E24767C8A00DAB86C /* APIMethod.swift in Sources */,
 				8B61DD9624767BE500DAB86C /* NetworkRouter.swift in Sources */,
 				8B61DD7524767B4600DAB86C /* Ext+Codable.swift in Sources */,
+				8B6722E82477CE32000185B4 /* Photo+CoreDataClass.swift in Sources */,
 				8B1882B2247621410024ADA4 /* SceneDelegate.swift in Sources */,
+				8B6722EA2477CF33000185B4 /* CoreDataManager.swift in Sources */,
 				8B61DD8624767BC600DAB86C /* Enviroment.swift in Sources */,
 				8BBBAF6924765AFD00980830 /* Ext+UIColorTheme.swift in Sources */,
+				8B6722E62477CE32000185B4 /* Photo+CoreDataProperties.swift in Sources */,
 				8BBBAF6624765A7A00980830 /* Ext+UIVC_AlertViewController.swift in Sources */,
 				8B599E6C2476EC550071C702 /* PhotoCellViewModel.swift in Sources */,
 				8B61DDA624768D5500DAB86C /* APIStruct.swift in Sources */,
@@ -581,8 +603,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73JT68725H;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SearchPhotoDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,8 +624,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73JT68725H;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SearchPhotoDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,6 +660,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B6722E12477CE31000185B4 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B6722E22477CE31000185B4 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 8B6722E22477CE31000185B4 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8B1882A4247621410024ADA4 /* Project object */;
 }

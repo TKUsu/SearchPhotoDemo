@@ -9,15 +9,22 @@
 import UIKit
 
 struct PhotoCellViewModel {
-    let id: String
-    let title: String
-    let imageURL: String
+    var id: String
+    var title: String
+    var imageURL: String
     var isfavorite: Bool = false
     
     init(id: String, title: String, imageURL: String) {
         self.id = id
         self.title = title
         self.imageURL = imageURL
+    }
+    /// CoreData init
+    init(id: String, title: String, imageURL: String, isfavorite: Bool) {
+        self.id = id
+        self.title = title
+        self.imageURL = imageURL
+        self.isfavorite = isfavorite
     }
     
     func download(complete: @escaping (_ image: UIImage?)->()) {

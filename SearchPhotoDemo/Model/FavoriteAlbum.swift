@@ -16,17 +16,50 @@ struct FavoriteAlbum {
         return _album
     }
     private var _album: AlBum = []
+    private let manager = CoreDataManager.shared
+    
+    init() {
+        match()
+    }
+    
+    mutating func match() {
+        let photos = manager.match()
+        _album = photos.map({ return PhotoCellViewModel(id: $0.id ?? "", title: $0.title ?? "", imageURL: $0.imageURL ?? "", isfavorite: true)} )
+    }
     
     mutating func update(photo: PhotoCellViewModel) {
         if photo.isfavorite && !_album.contains(where: {$0.id == photo.id}) {
-            _album.append(photo)
+            save(photo: photo)
         }else if !photo.isfavorite {
-            for i in 0..<_album.count {
-                if _album[i].id == photo.id{
-                    _album.remove(at: i)
-                    return
-                }
+            delete(photo: photo)
+        }
+    }
+    
+    func sync(with origin: inout AlBum, complete: ()->()) {
+        _album.forEach({ photo in
+            if let index = origin.firstIndex(where: {$0.id == photo.id}) {
+                origin[index] = photo
+            }
+        })
+        complete()
+    }
+    
+    fileprivate mutating func save(photo: PhotoCellViewModel) {
+        // Client save
+        _album.append(photo)
+        // Database save
+        manager.createPhoto(id: photo.id, title: photo.title, imageURL: photo.imageURL)
+    }
+    
+    fileprivate mutating func delete(photo: PhotoCellViewModel) {
+        // Client
+        for i in 0..<_album.count {
+            if _album[i].id == photo.id{
+                _album.remove(at: i)
+                break
             }
         }
+        // Database delete
+        manager.delete(with: photo)
     }
 }

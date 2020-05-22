@@ -31,7 +31,8 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         clear()
         self.photo = photo
         
-        self.Lbl_title.text = photo.title
+        setBtnImage()
+        Lbl_title.text = photo.title
         DispatchQueue.init(label: "downloadURL").async {
             photo.download{[weak self] image in
                 DispatchQueue.main.async {

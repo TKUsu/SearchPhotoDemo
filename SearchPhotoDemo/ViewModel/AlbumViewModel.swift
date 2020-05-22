@@ -37,8 +37,9 @@ class AlbumViewModel {
             self.album = res.photos.photo.map({ (photo) -> PhotoCellViewModel in
                 return PhotoCellViewModel(id: photo.id, title: photo.title, imageURL: photo.imageURL)
             })
-            // TODO: load DB to sync data
-            self.delegate?.didRequestAlbum()
+            favoriteAlbum.sync(with: &self.album){
+                self.delegate?.didRequestAlbum()
+            }
         }
     }
     
