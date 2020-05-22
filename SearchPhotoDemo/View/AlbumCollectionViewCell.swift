@@ -14,7 +14,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var Lbl_title: UILabel!
     @IBOutlet weak var Btn_favorite: UIButton!
     
-    var photo: PhotoCellViewModel!
+    var photo: PhotoCellViewModel?
     var onFavorite: ((_ photo: PhotoCellViewModel)->())!
     
     override func awakeFromNib() {
@@ -24,11 +24,11 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imgV.image = nil
-        Lbl_title.text = ""
+        clear()
     }
     
     func setup(with photo: PhotoCellViewModel) {
+        clear()
         self.photo = photo
         
         self.Lbl_title.text = photo.title
@@ -40,11 +40,24 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
     @IBAction func favoriteAction(_ sender: UIButton) {
-        photo.isfavorite = !photo.isfavorite
-        if let image = photo.isfavorite ? UIImage.favorite : UIImage.unfavorite{
+        guard photo != nil else{ return }
+        photo!.isfavorite = !photo!.isfavorite
+        setBtnImage()
+        onFavorite(photo!)
+    }
+    
+    fileprivate func clear() {
+        imgV.image = nil
+        Lbl_title.text = ""
+        photo = nil
+        Btn_favorite.setImageForAllStates(UIImage.unfavorite!)
+    }
+    
+    fileprivate func setBtnImage() {
+        if let image = photo!.isfavorite ? UIImage.favorite : UIImage.unfavorite{
             self.Btn_favorite.setImageForAllStates(image)
         }
-        onFavorite(photo)
     }
 }
