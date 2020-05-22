@@ -14,7 +14,7 @@ class FavoriteCollectionViewModel {
     init() { }
     
     func addObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(update(_:)), name: .updatefavorite, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(update(_:)), name: .updatefavoritefromAlbun, object: nil)
     }
     
     func removeObserver() {
@@ -23,5 +23,11 @@ class FavoriteCollectionViewModel {
     
     @objc fileprivate func update(_ notification: Notification) {
         updateHandle()
+    }
+    
+    func updatefavorite(photo: PhotoCellViewModel) {
+        favoriteAlbum.update(photo: photo)
+        updateHandle()
+        NotificationCenter.default.post(name: .updatefavoritefromFavorite, object: nil)
     }
 }

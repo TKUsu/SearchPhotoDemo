@@ -35,13 +35,20 @@ struct FavoriteAlbum {
         }
     }
     
-    func sync(with origin: inout AlBum, complete: ()->()) {
-        _album.forEach({ photo in
-            if let index = origin.firstIndex(where: {$0.id == photo.id}) {
-                origin[index] = photo
+    func sync(with origin: AlBum, complete: (_ newAlbum: AlBum)->()) {
+        var newAlbum: AlBum = []
+        origin.forEach({ photo in
+            if _album.contains(where: {$0.id == photo.id}) {
+                var newPhoto = photo
+                newPhoto.isfavorite = true
+                newAlbum.append(newPhoto)
+            }else{
+                var newPhoto = photo
+                newPhoto.isfavorite = false
+                newAlbum.append(newPhoto)
             }
         })
-        complete()
+        complete(newAlbum)
     }
     
     fileprivate mutating func save(photo: PhotoCellViewModel) {

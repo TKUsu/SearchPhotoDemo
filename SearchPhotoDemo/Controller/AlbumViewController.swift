@@ -26,6 +26,10 @@ class AlbumViewController: SuperViewController {
         
         loadData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.addObserver()
+    }
     
     // MARK: - Private
     @objc fileprivate func loadData() {
@@ -64,9 +68,11 @@ class AlbumViewController: SuperViewController {
 // MARK: - AlbumViewModel delegate
 extension AlbumViewController: AlbumViewModelDelegate{
     func didRequestError(code: String?, log: String?) {
-        presentAlert(title: "Error", subTitle: code, msg: log, actionTitle: "ok") {[weak self] (sender) in
-            self?.activityView.stopAnimating()
-            self?.navigationController?.popViewController()
+        DispatchQueue.main.async {[weak self] in
+            self?.presentAlert(title: "Error", subTitle: code, msg: log, actionTitle: "ok") {[weak self] (sender) in
+                self?.activityView.stopAnimating()
+                self?.navigationController?.popViewController()
+            }
         }
     }
     
@@ -95,11 +101,8 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withClass: AlbumCollectionViewCell.self, for: indexPath)
         
         cell.setup(with: viewModel.album[indexPath.row])
-        cell.onFavorite = onfavorite(_:)
+        cell.onFavorite = viewModel.updatefavorite
         
         return cell
-    }
-    fileprivate func onfavorite(_ photo: PhotoCellViewModel){
-        viewModel.updatefavorite(photo: photo)
     }
 }

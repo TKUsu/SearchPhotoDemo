@@ -9,5 +9,6 @@
 import Foundation
 
 extension Notification.Name{
-    static let updatefavorite: Notification.Name = Notification.Name("UPDATE_FAVORITE")
+    static let updatefavoritefromAlbun: Notification.Name = Notification.Name("UPDATE_FAVORITE_FROM_ALBUN")
+    static let updatefavoritefromFavorite: Notification.Name = Notification.Name("UPDATE_FAVORITE_FROM_FAVORITE")
 }

@@ -54,8 +54,8 @@ class FavoriteCollectionViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: AlbumCollectionViewCell.self, for: indexPath)
     
-        cell.Btn_favorite.isHidden = true
         cell.setup(with: favoriteAlbum.album[indexPath.row])
+        cell.onFavorite = viewModel.updatefavorite
         
         return cell
     }
